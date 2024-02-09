@@ -3,11 +3,16 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
 }
 
 button {
   border: none;
   background: transparent;
+}
+a{
+    text-decoration: none;
+    color: #898989;
 }
 body {
   display: flex;
@@ -79,4 +84,39 @@ body {
     width: 260px;
     display: flex;
     justify-content: space-between;
+}
+
+// navigation
+
+main{
+    margin: 50px 0 30px 30px;
+}
+nav{
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+
+    ul{
+        display: flex;
+        gap: 29px;
+        flex-direction: column;
+        li{
+            img{
+                margin-right: 15px;
+            }
+            a{
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        li.active{
+            a{
+                color: #FF0000;
+            }
+        }
+    }
+    ul.second-list{
+      gap: 29px;
+    }
 }
