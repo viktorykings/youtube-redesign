@@ -167,21 +167,20 @@ nav {
     margin: 5px 0 4px;
   }
 }
-// .item{
-//   width: 250px;
-// }
-.subtitle{
+
+.subtitle {
   font-size: 13px;
-  color: #C2C2C2;
+  color: #c2c2c2;
   display: flex;
   justify-content: space-between;
 }
-.subtitle span:first-child{
-  letter-spacing: 0.3px;
+.subtitle span:first-child {
+  letter-spacing: 0.5px;
 }
 .heading {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin: 0 0 30px;
 
   .user {
@@ -192,6 +191,59 @@ nav {
     }
   }
 }
-h2{
+h2 {
   font-size: 26px;
+}
+.recommended{
+  .subtitle span:first-child {
+    letter-spacing: 0px;
+  }
+  .subtitle span:last-child {
+    letter-spacing: -0.6px;
+  }
+}
+.food-n-drinks {
+  margin-top: 15px;
+  .subtitle span:first-child {
+    letter-spacing: 0.4px;
+  }
+  .user{
+    .subtitle{
+      font-size: 16px;
+      font-weight: normal;
+      margin: 5px 0 0;
+    }
+
+  }
+  .heading{
+    height: 60px;
+    margin: 0 0 20px;
+    align-items: flex-start;
+  }
+  .controls{
+    margin: 15px 150px 0 0;
+    align-items: center;
+  }
+}
+.controls{
+  display: flex;
+  gap: 10px;
+  margin: 0 150px;
+}
+.arrow-btn{
+  border-radius: 50%;
+  background-color: #c2c2c2;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe-btn{
+  width: 156px;
+  height: 40px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 20px;
+  margin-right: 27px;
 }
