@@ -6,12 +6,13 @@
   font-family: "Mulish", sans-serif;
 }
 
-button {
+button,
+input {
   border: none;
   background: transparent;
-}
-button, input{
-  font-family: inherit;
+  font: inherit;
+  font-size: 16px;
+  color: #898989;
 }
 a {
   text-decoration: none;
@@ -21,6 +22,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+h3 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 30px;
 }
 
 .header {
@@ -39,14 +45,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12px 0 25px;
+  margin: 0 0 0 30px;
+  padding: 0 17px 0 25px;
 
-  input {
-    border: none;
-    background: transparent;
-  }
   img {
-    width: 20px;
+    width: 22px;
   }
 }
 
@@ -80,21 +83,29 @@ body {
 }
 .header-btns {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
-
 .header-icons {
   width: 260px;
   display: flex;
   justify-content: space-between;
+  margin-left: 10px;
 }
 
 // navigation
 
 .main-container {
-  margin: 50px 0 30px 30px;
+  margin: 30px 0 30px 30px;
   display: flex;
-  gap: 65px;
+  overflow-x: hidden;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0;
+  gap: 55px;
 }
 nav {
   display: flex;
@@ -125,20 +136,21 @@ nav {
     gap: 29px;
   }
 }
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
 .users {
   display: flex;
   gap: 23px;
   align-content: center;
   flex-direction: column;
+  width: 165px;
 }
 .user {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-.user-info {
-  display: flex;
-  flex-direction: column;
 }
 .settings {
   width: 83px;
@@ -146,15 +158,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-// main
-
-.main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 35px;
 }
 .content-container {
   width: 100vw;
@@ -173,6 +176,25 @@ nav {
   font-size: 26px;
   font-weight: bold;
 }
+
+// main
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 60px;
+  flex: 1;
+  gap: 35px;
+}
+.content {
+  display: flex;
+  gap: 40px;
+  h3 {
+    font-size: 16px;
+    margin: 5px 0 4px;
+  }
+}
+
 .subtitle {
   font-size: 13px;
   color: #c2c2c2;
@@ -223,7 +245,7 @@ h2 {
   .heading {
     height: 60px;
     margin: 0 0 20px;
-    align-items: flex-start;
+    align-items: center;
   }
   .controls {
     margin: 15px 150px 0 0;
@@ -288,6 +310,12 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
+.subscribe-btns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 40px;
+}
 .cover {
   max-width: 1595px;
   height: 280px;
@@ -314,13 +342,20 @@ h2 {
   max-width: 1120px;
   gap: 32px;
 }
-.video-info p:nth-child(2) {
-  margin: 10px 0 30px;
+.video-info {
+  p:nth-child(1) {
+    width: 431px;
+  }
+  p:nth-child(2) {
+    margin: 10px 0 30px;
+  }
 }
 .channel-nav {
   display: flex;
-  gap: 60px;
+  gap: 69px;
   height: auto;
+  font-size: 18px;
+  font-weight: bold;
   .active {
     color: #ff0000;
   }
@@ -338,10 +373,10 @@ h2 {
   flex-direction: column;
   gap: 30px;
   flex: 1;
-  li{
+  li {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 20px;
     font-size: 18px;
     font-weight: bold;
   }
@@ -412,7 +447,7 @@ h2 {
   }
   .heading,
   .recommended,
-  .videos {
+  .food-n-drinks {
     display: none;
   }
   .content .item:nth-child(5),
