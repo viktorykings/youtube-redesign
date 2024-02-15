@@ -1,7 +1,8 @@
 import { Search } from "./header/Search";
-import { HeaderBtn, HeaderBtns } from "./header/HeaderBtn";
+import { HeaderBtns } from "./header/HeaderBtn";
 import {btnImg} from '../data/btnImg'
 import logo from '../assets/Black.svg';
+import '../styles/header.scss'
 
 
 export const Header = () => {

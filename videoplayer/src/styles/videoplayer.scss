@@ -1,0 +1,26 @@
+.title{
+    font-size: 36px;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 20px;
+    color: #C2C2C2;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.btns{
+    display: flex;
+    button {
+        width: 100px;
+        height: 40px;border-radius: 20px;
+        background-color: #EBEBEB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    button:last-child{
+        background-color: transparent;
+    }
+}
