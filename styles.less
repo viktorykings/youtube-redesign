@@ -35,7 +35,10 @@ h3 {
   align-items: center;
   margin: 20px 70px 0 30px;
 }
-
+.logo-mobile,
+.options {
+  display: none;
+}
 .search-input {
   height: 44px;
   width: 830px;
@@ -160,7 +163,8 @@ nav {
   align-items: center;
 }
 .content-container {
-  width: 100vw;
+  width: auto;
+  max-width: 1595px;
   overflow-x: hidden;
 }
 .content {
@@ -231,6 +235,8 @@ h2 {
   }
 }
 .videos {
+  width: 85vw;
+  overflow-x: hidden;
   margin-top: 15px;
   .subtitle span:first-child {
     letter-spacing: 0.4px;
@@ -296,7 +302,6 @@ h2 {
 }
 
 .channel {
-  max-width: 1595px;
   margin: 0 70px 0 0;
   display: flex;
   flex-direction: column;
@@ -317,18 +322,17 @@ h2 {
   height: 40px;
 }
 .cover {
-  max-width: 1595px;
   height: 280px;
   border-radius: 14px;
   background-image: url(./assets/channel/channel-cover.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   margin: 0 0 10px;
+  background-size: cover;
 }
 .channel-content {
   display: flex;
   justify-content: space-between;
-  gap: 204px;
 }
 .channel-info {
   display: flex;
@@ -366,13 +370,16 @@ h2 {
     height: 2px;
     background-color: #ff0000;
   }
+  li:last-child {
+    display: none;
+  }
 }
 .channel-recommended {
-  width: 188px;
+  width: 190px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  flex: 1;
+  margin: 0 80px 0 0;
   li {
     display: flex;
     align-items: center;
@@ -382,17 +389,56 @@ h2 {
   }
 }
 
+@media (max-width: 1735px) {
+  .channel-recommended {
+    margin: 0;
+  }
+}
+@media (max-width: 1660px) {
+  .channel-video {
+    flex-direction: column;
+    align-content: start;
+  }
+  .channel-nav {
+    gap: 30px;
+  }
+}
 @media (max-width: 1420px) {
   .search-input {
     width: 430px;
+  }
+  .channel-content {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .channel-recommended {
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .channel-nav {
+    gap: 15px;
+  }
+  .videos {
+    width: 75vw;
   }
 }
 @media (max-width: 1080px) {
   .search-input {
     width: 260px;
   }
+  .main {
+    margin: 0 0 0 20px;
+  }
 }
 @media (max-width: 768px) {
+  .main-container {
+    margin: 0 10px;
+    justify-content: center;
+  }
+  .main {
+    margin: 0;
+  }
   .header {
     margin: 10px 16px 5px;
     align-items: flex-start;
@@ -436,28 +482,120 @@ h2 {
   .footer {
     display: flex;
   }
+  .videos .controls {
+    margin: 15px 0;
+    align-items: center;
+  }
 }
 @media (max-width: 576px) {
+  .header {
+    align-items: center;
+    margin: 2px 18px 15px;
+  }
   .main-container {
-    margin: 0;
+    margin: 0 16px;
+  }
+  .header-icons {
+    display: none;
   }
   .main {
     align-items: center;
-    margin: 0 0 18px;
+    gap: 0;
   }
-  .heading,
-  .recommended,
-  .food-n-drinks {
+  .search-input {
+    padding: 0;
+    margin: 0 35px 0 0;
+    align-items: center;
+  }
+  .logo-mobile,
+  .options {
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    img{
+      margin-right: 8px;
+    }
+  }
+  .options{
+    margin: 0 -8px 0 0;
+  }
+  .logo {
     display: none;
   }
-  .content .item:nth-child(5),
-  .content .item:nth-child(6) {
+  .footer {
+    font-size: 10px;
+  }
+  .cover {
+    height: 100px;
+    border-radius: unset;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+  .user {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    img {
+      width: 70px;
+    }
+  }
+  .subscribe-btn {
+    width: 120px;
+    height: 34px;
+    font-size: 12px;
+  }
+  .channel {
+    margin: 0;
+    align-self: flex-start;
+    gap: 29px;
+  }
+  .channel-header {
+    flex-direction: column;
+    margin: 66px 0 0;
+    gap: 20px;
+  }
+  .subscribe-btns {
+    button:first-child {
+      display: none;
+    }
+  }
+  .heading {
     display: none;
+  }
+  .channel-nav {
+    font-size: 14px;
+    gap: 40px;
+    li:nth-child(4),
+    li:nth-child(5),
+    li:nth-child(6),
+    li:nth-child(7) {
+      display: none;
+    }
+    li:last-child {
+      display: block;
+    }
+  }
+  .channel-video,
+  .channel-recommended {
+    display: none;
+  }
+  .videos {
+    width: auto;
+    margin-top: 20px;
+    height: 600px;
+    overflow-y: hidden;
   }
   .content {
     flex-direction: column;
     width: max-content;
     gap: 30px;
+    .item:nth-child(4),
+    .item:nth-child(5),
+    .item:nth-child(6) {
+      display: none;
+    }
   }
   .item {
     img {
@@ -465,7 +603,10 @@ h2 {
       height: 150px;
     }
   }
-  .footer {
-    font-size: 10px;
+  .title {
+    font-size: 20px;
+  }
+  .subtitle {
+    font-size: 12px;
   }
 }
