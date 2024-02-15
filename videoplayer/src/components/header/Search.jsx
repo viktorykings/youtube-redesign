@@ -1,8 +1,9 @@
+import icon from '../../assets/search-icon.svg';
 export const Search = () => {
   return (
-    <div class="search-input">
+    <div className="search-input">
       <input type="text" placeholder="Search" />
-      <img src="./assets/search-icon.svg" alt="" />
+      <img src={icon} alt="" />
     </div>
   );
 };
