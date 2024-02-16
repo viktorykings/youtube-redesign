@@ -1,6 +1,7 @@
 import { VideoPlayer } from "../components/VideoPlayer";
 import { Description } from "../components/Description";
 import '../styles/main.scss';
+import { NextVideos } from "./NextVideos";
 
 export const Main = () => {
   return (
@@ -9,9 +10,7 @@ export const Main = () => {
         <VideoPlayer />
         <Description />
       </div>
-      <aside>
-
-      </aside>
+      <NextVideos />
     </section>
   );
 };
