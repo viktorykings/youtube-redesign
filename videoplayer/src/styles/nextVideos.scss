@@ -56,14 +56,14 @@
   .next-videos{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 26px;
     width: 22%;
   }
   .heading{
     font-size: 36px;
     font-weight: bold;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
   }
   .label{
@@ -73,15 +73,17 @@
     align-items: center;
     gap: 11px;
     color: #19202C;
+    letter-spacing: 0.9px;
   }
   .item{
     width: 100%;
     img{
+        height: 213px;
         width: inherit;
     }
     h3{
         font-size: 26px;
-        margin: 13px 0 14px;
+        margin: 10px 0;
     }
     .subtitle{
         font-size: 18px;
