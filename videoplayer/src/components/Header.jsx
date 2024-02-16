@@ -1,6 +1,7 @@
 import { HeaderBtns } from "./header/HeaderBtn";
 import { Search } from "./header/Search";
 import logo from '../assets/Black.svg';
+import dots from '../assets/dots.png';
 import '../styles/header.scss'
 
 
@@ -15,7 +16,8 @@ export const Header = () => {
           <img src={logo} alt="" />
         </div>
       </div>
-        <Search />
+      <Search />
+      <button className="options"><img src={dots} alt="" /></button>
       <HeaderBtns />
     </header>
   );

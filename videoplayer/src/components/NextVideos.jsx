@@ -1,5 +1,5 @@
 import { Item } from "./nextVideos/Item";
-import { videos } from "../data/videos";
+import { videos } from "../data/data";
 import "../styles/nextVideos.scss";
 
 export const NextVideos = () => {

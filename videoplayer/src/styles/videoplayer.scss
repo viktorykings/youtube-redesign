@@ -27,7 +27,10 @@
   display: flex;
   flex-direction: column;
   margin: 0 0 15px;
-  .info{
+  & > img {
+    width: 100%;
+  }
+  .info {
     align-items: center;
   }
   .title {
@@ -38,5 +41,43 @@
   .subtitle {
     font-size: 20px;
     color: #c2c2c2;
+  }
+}
+@media (max-width: 1440px) {
+  .video-player {
+    .title {
+      font-size: 26px;
+      margin: 20px 0;
+    }
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .video-player {
+    & > img{
+      height: 320px;
+    }
+    .title {
+      font-size: 20px;
+    }
+    .subtitle {
+      font-size: 12px;
+    }
+    .title,
+    .info {
+      margin: 13px 16px 4px;
+    }
+    .info {
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .video-player {
+    & > img{
+      height: 180px;
+    }
   }
 }
