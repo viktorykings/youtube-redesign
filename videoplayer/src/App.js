@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.scss';
 import { Header } from './components/Header';
-import { VideoPlayer } from './components/VideoPlayer';
+import { Main } from './components/Main';
 
 function App() {
   return (
     <>
       <Header />
-      <VideoPlayer />
+      <Main />
     </>
   );
 }

@@ -1,12 +1,10 @@
-import { Search } from "./header/Search";
 import { HeaderBtns } from "./header/HeaderBtn";
-import {btnImg} from '../data/btnImg'
+import { Search } from "./header/Search";
 import logo from '../assets/Black.svg';
 import '../styles/header.scss'
 
 
 export const Header = () => {
-    console.log(btnImg)
   return (
     <header className="header">
       <div className="header-btns">

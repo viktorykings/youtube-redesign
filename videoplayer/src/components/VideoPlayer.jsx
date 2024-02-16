@@ -7,7 +7,7 @@ import '../styles/videoplayer.scss'
 
 export const VideoPlayer = () => {
   return (
-    <>
+    <div className='video-player'>
       <img src={video} alt="" />
       <p className="title">Dude You Re Getting A Telescope</p>
       <div className="info">
@@ -19,6 +19,6 @@ export const VideoPlayer = () => {
           <button><img src={icon4} alt="" /></button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
