@@ -17,6 +17,10 @@
   color: #fff;
   border-radius: 20px;
 }
+.mobile-subscribe,
+.subscribe-mobile-btn {
+  display: none;
+}
 .description {
   padding: 38px 0 0;
   border-top: 1px solid #d8d8d8;
@@ -78,16 +82,15 @@
     padding: 20px 0;
 
     .info {
-
-        justify-content: flex-start;
-        align-items: center;
+      justify-content: flex-start;
+      align-items: center;
       img {
         width: 50px;
         height: 50px;
       }
     }
     .subtitle,
-    .info p:nth-child(3),
+    .info p:nth-child(4),
     .show-more {
       display: none;
     }
@@ -95,5 +98,18 @@
   .title {
     font-size: 16px;
   }
-
+}
+@media (max-width: 576px) {
+  .subtitle.mobile-subscribe,
+  .subscribe-mobile-btn {
+    display: flex;
+  }
+  .subscribe-mobile-btn {
+    color: #ff0000;
+    font-size: 16px;
+    align-self: center;
+  }
+  .subscribe-btn{
+    display: none;
+  }
 }

@@ -53,10 +53,26 @@
       font-size: 16px;
     }
   }
+  .btns {
+    font-size: 12px;
+    button {
+      width: 80px;
+      height: 30px;
+    }
+  }
+}
+@media(max-width: 1080px){
+  .btns {
+    font-size: 12px;
+    button {
+      width: 80px;
+      height: 30px;
+    }
+  }
 }
 @media (max-width: 768px) {
   .video-player {
-    & > img{
+    & > img {
       height: 320px;
     }
     .title {
@@ -76,8 +92,23 @@
 }
 @media (max-width: 576px) {
   .video-player {
-    & > img{
+    & > img {
       height: 180px;
+    }
+    .info {
+      margin: 0 16px 15px;
+      gap: 20px;
+      align-items: flex-start;
+    }
+  }
+  .btns {
+    button{
+      font-size: 16px;
+      width: 100px;
+      height: 40px;
+    }
+    button:last-child {
+      display: none;
     }
   }
 }
