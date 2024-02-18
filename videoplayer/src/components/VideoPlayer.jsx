@@ -6,6 +6,7 @@ import video from "../assets/videoplayer/Cover.png";
 import pause from "../assets/videoplayer/pause.svg";
 import next from "../assets/videoplayer/next.svg";
 import volume from "../assets/videoplayer/volume.svg";
+import volumeBar from "../assets/videoplayer/volume-bar.svg";
 import subtitles from "../assets/videoplayer/subtitles.svg";
 import settings from "../assets/videoplayer/settings.svg";
 import size from "../assets/videoplayer/size.svg";
@@ -36,6 +37,7 @@ export const VideoPlayer = () => {
               <button>
                 <img src={volume} alt="" />
               </button>
+              <span className="volume"></span>
             </div>
             <div className="right-controls">
               <button>

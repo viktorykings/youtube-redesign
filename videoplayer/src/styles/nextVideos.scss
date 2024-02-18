@@ -142,13 +142,16 @@ input:checked + .slider:before {
     align-items: center;
   }
   .heading{
-    gap: 110px;
+    gap: 135px;
   }
   .item {
     width: 288px;
     .img-container {
       height: 150px;
     }
+  }
+  .label{
+    font-size: 10px;
   }
 }
 @media (max-width: 576px) {
@@ -157,5 +160,28 @@ input:checked + .slider:before {
     .subtitle {
       font-size: 13px;
     }
+    h3{
+      margin: 10px 0 5px;
+    }
+  }
+  .next-videos{
+    gap: 11px;
+  }
+  .switch {
+    width: 30px;
+    height: 19px;
+  }
+  .slider:before {
+    height: 17px;
+    width: 17px;
+    left: 2px;
+    bottom: 2px;
+  }
+  .slider.round {
+    border-radius: 9.55px;
+  }
+  
+  .slider.round:before {
+    border-radius: 9.55px;
   }
 }

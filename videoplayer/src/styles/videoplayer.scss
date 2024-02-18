@@ -1,10 +1,11 @@
-.video-container{
+.video-container {
   position: relative;
-  img{
+  img {
     width: 100%;
+    height: 100%;
   }
 }
-.video-controls{
+.video-controls {
   position: absolute;
   bottom: 33px;
   left: 33px;
@@ -15,36 +16,52 @@
   color: #fff;
   font-size: 22px;
 }
-.progress-bar{
+.progress-bar {
   height: 10px;
   border-radius: 5px;
   background-color: rgba($color: #fff, $alpha: 0.2);
 }
-.progress-bar::before{
+.progress-bar::before {
   content: "";
   display: block;
   height: 10px;
-  background-color: #FF0000;
+  background-color: #ff0000;
   width: 30%;
   border-radius: inherit;
 }
 .times,
-.controls{
+.controls {
   display: flex;
   justify-content: space-between;
 }
-.controls{
+.controls {
   margin: 0 10px;
 }
 .left-controls,
-.right-controls{
+.right-controls {
   display: flex;
+  align-items: center;
 }
-.left-controls{
+.left-controls {
   gap: 40px;
 }
-.right-controls{
+.right-controls {
   gap: 25px;
+}
+.volume {
+  width: 86px;
+  height: 8px;
+  background-color: rgba($color: #fff, $alpha: 0.2);
+  border-radius: 4px;
+  margin: 0 0 2px -20px;
+}
+.volume::before {
+  content: "";
+  display: flex;
+  height: 8px;
+  width: 30%;
+  background-color: #fff;
+  border-radius: 4px;
 }
 .info {
   display: flex;
@@ -92,6 +109,19 @@
   }
 }
 @media (max-width: 1440px) {
+  .times {
+    font-size: 10px;
+  }
+  .video-controls {
+    gap: 10px;
+  }
+  .progress-bar,
+  .progress-bar::before {
+    height: 5px;
+  }
+  .volume {
+    display: none;
+  }
   .video-player {
     .title {
       font-size: 26px;
@@ -109,7 +139,7 @@
     }
   }
 }
-@media(max-width: 1080px){
+@media (max-width: 1080px) {
   .btns {
     font-size: 12px;
     button {
@@ -139,6 +169,12 @@
   }
 }
 @media (max-width: 576px) {
+  .video-container {
+    height: 180px;
+  }
+  .controls {
+    margin: 0 18px;
+  }
   .video-player {
     & > img {
       height: 180px;
@@ -150,7 +186,7 @@
     }
   }
   .btns {
-    button{
+    button {
       font-size: 16px;
       width: 100px;
       height: 40px;
@@ -158,5 +194,50 @@
     button:last-child {
       display: none;
     }
+  }
+  .video-controls {
+    justify-content: center;
+    height: 30px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 8px;
+    left: 6px;
+    right: 6px;
+  }
+  .progress-bar {
+    width: 156px;
+  }
+  .right-controls,
+  .left-controls button:nth-child(2) {
+    display: none;
+  }
+  .left-controls {
+    width: 100%;
+    justify-content: space-between;
+    button {
+      display: flex;
+      align-items: center;
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  .times,
+  .progress-bar {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+  }
+  .progress-bar {
+    width: 50%;
+    left: 23%;
+    top: 13px;
+  }
+  .times {
+    width: auto;
+    left: 43px;
+    right: 43px;
   }
 }
