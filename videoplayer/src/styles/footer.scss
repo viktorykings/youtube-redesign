@@ -48,6 +48,9 @@ nav {
 @media (max-width: 768px) {
   .footer {
     display: flex;
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
     font-size: 10px;
   }
 }
