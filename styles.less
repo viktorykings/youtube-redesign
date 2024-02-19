@@ -236,7 +236,7 @@ h2 {
 }
 .videos {
   width: 85vw;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   margin-top: 15px;
   .subtitle span:first-child {
     letter-spacing: 0.4px;
@@ -481,10 +481,19 @@ h2 {
   }
   .footer {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+  }
+  .videos{
+    margin: 15px 0 85px;
   }
   .videos .controls {
     margin: 15px 0;
     align-items: center;
+  }
+  .channel{
+    margin: 0;
   }
 }
 @media (max-width: 576px) {
